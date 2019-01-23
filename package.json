@@ -1,0 +1,45 @@
+{
+  "name": "ajlearnjs",
+  "version": "1.0.1",
+  "description": "Bundle for Node Server with ExpressMidWares & ajFnsAsASvc Package ES6-importable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mindsoffire/ajFns.git"
+  },
+  "keywords": [
+    "FaaS",
+    "Functions",
+    "Algos"
+  ],
+  "author": "Andrew J. Tan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mindsoffire/ajFns/issues"
+  },
+  "homepage": "https://github.com/mindsoffire/ajFns#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "firebase-admin": "^6.5.0",
+    "fs": "0.0.1-security",
+    "js-sha256": "^0.9.0",
+    "jwt-simple": "^0.5.5",
+    "multer": "^1.4.1",
+    "nodemailer": "^5.1.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.29.0",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
