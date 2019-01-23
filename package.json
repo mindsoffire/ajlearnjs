@@ -1,6 +1,6 @@
 {
   "name": "ajlearnjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Bundle for Node Server with ExpressMidWares & ajFnsAsASvc Package ES6-importable",
   "main": "index.js",
   "scripts": {
