@@ -12,7 +12,9 @@
 export function sha256(str: string): string;                        // 
 // exports.jwt = jwt;                              // 
 // exports.trace = trace;                          // = desctr => objOrFn => console.log(...JSON.str)
+export function trace(str: string)(obj: object): void;                          // = desctr => objOrFn => console.log(...JSON.str)
 // exports._range = _range;                        // = (beg = 0, end = !end ? beg : beg = 0, step = 1, ret = []) => arr[0|beg...beg|end]
+export function _range(beg: number, end?: number, step?: number): Array<number>;                        // = (beg = 0, end = !end ? beg : beg = 0, step = 1, ret = []) => arr[0|beg...beg|end]
 // exports.f_chrBarMeter = f_chrBarMeter;          // = (desc, level, maxLvl = 30, chr = String.fromCodePoint(9613), LED = true) => [...bars]
 // exports.danceMeter = danceMeter;                // = async (strArr, ms) => process.stdout.write([...barChrs])
 // exports.tf_getYear = tf_getYear;                // = () => YYYYnum
@@ -24,6 +26,9 @@ export function sha256(str: string): string;                        //
 // exports.f_arrSort = f_arrSort;                  // = (arr, ascDes = -1) => [ ...ascDecStrNum ]
 // exports.f_strOrArrReverse = f_strOrArrReverse;  // = (strOrArr, divdr = '', joinr = divdr) => revStrOrArr
 export function f_rotajF(str: string): string;                    // = str => encryStr
+export function f_rotjaF(str: string): string;                    // = str => encryStr
+export function f_rotajG(str: string): string;                    // = str => encryStr
+export function f_rotjaG(str: string): string;                    // = str => encryStr
 // exports.f_rotjaF = f_rotjaF;                    // = str => decryStr
 // exports.f_rotajG = f_rotajG;                    // = str => encryStr
 // exports.f_rotjaG = f_rotjaG;                    // = str => decryStr
