@@ -36,7 +36,8 @@ export function f_rotjaG(str: string): string;                    // = str => en
 // exports.f_sanitizeStr = f_sanitizeStr;          // = str => saneStr
 // exports.f_strEncDec = f_strEncDec;              // = (str, pos = 0, num = 40967) => encStr | {error on num ranhe}
 // exports.f_encDecName = f_encDecName;            // = (str, pos = 0, num = 42243) => {encEmailOrFullNameStr} | {error on num ranhe}
-// exports.tfo_objFty = tfo_objFty;                // = (name, IC, bDate, ...restParams) => factoried{}wCntrGetrSetr
+// exports.f_encDecName = f_encDecName;            // = (str, pos = 0, num = 42243) => {encEmailOrFullNameStr} | {error on num ranhe}
+// exports.f_encDecUsrName = f_encDecUsrName;      // = (str, pos = 0) => {encEmailOrFullNameStr}
 // exports.GreekAlphabet = GreekAlphabet;
 // exports.GreekAlphabet = GreekAlphabet;
 // exports.Codes = Codes;
