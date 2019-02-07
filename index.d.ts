@@ -12,7 +12,7 @@
 export function sha256(str: string): string;                        // 
 // exports.jwt = jwt;                              // 
 // exports.trace = trace;                          // = desctr => objOrFn => console.log(...JSON.str)
-export function trace(str: string)(obj: object): void;                          // = desctr => objOrFn => console.log(...JSON.str)
+// export function trace(str: string)(obj: object): void;                          // = desctr => objOrFn => console.log(...JSON.str)
 // exports._range = _range;                        // = (beg = 0, end = !end ? beg : beg = 0, step = 1, ret = []) => arr[0|beg...beg|end]
 export function _range(beg: number, end?: number, step?: number): Array<number>;                        // = (beg = 0, end = !end ? beg : beg = 0, step = 1, ret = []) => arr[0|beg...beg|end]
 // exports.f_chrBarMeter = f_chrBarMeter;          // = (desc, level, maxLvl = 30, chr = String.fromCodePoint(9613), LED = true) => [...bars]
