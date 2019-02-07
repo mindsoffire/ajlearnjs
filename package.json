@@ -131,6 +131,7 @@
   "deprecated": false,
   "description": "Bundle for Node Server with ExpressMidWares & ajFnsAsASvc Package ES6-importable",
   "devDependencies": {
+    "@types/node": "^10.12.21",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-preset-es2015": "^6.24.1",
