@@ -42,3 +42,4 @@ export function f_encDecUsrName(str: string, pos?: number): Array<object>;      
 // exports.GreekAlphabet = GreekAlphabet;
 // exports.Codes = Codes;
 export function f_genIssueToken(encID: string, hshPW: string, perms: string, defMin?: number, hshPIN?: string): string;
+export function f_genLinkTokenWTimeExpry(digCnt?: number, nameOfLinkToken?: string, hrs2ExpireFmIssuance?: number, chars?: string): object;
