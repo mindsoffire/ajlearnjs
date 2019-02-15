@@ -18,7 +18,7 @@ export function _range(beg: number, end?: number, step?: number): Array<number>;
 // exports.f_chrBarMeter = f_chrBarMeter;          // = (desc, level, maxLvl = 30, chr = String.fromCodePoint(9613), LED = true) => [...bars]
 // exports.danceMeter = danceMeter;                // = async (strArr, ms) => process.stdout.write([...barChrs])
 // exports.tf_getYear = tf_getYear;                // = () => YYYYnum
-// exports.f_capitalize = f_capitalize;            // = (str, type = 'none|words|sentences|allCaps') => str
+// exports.f_capitalize = f_capitalize;            // = (str, type = 'none|words|sentences|allcaps') => str
 // exports.f_strnum2OrdVals = f_strnum2OrdVals;    // = (str, divdr = '') => [ ...OrdVals ]
 // exports.f_todayOrDate2YMD = f_todayOrDate2YMD;  // = (todayOrDate = new Date(), divdr = '-') => YYYY-MM-DDstr
 // exports.f_randActyBlot = f_randActyBlot;        // = (daysFrToday, numOfActy, startOfBizDay = 0900, hoursInBizDay = 12, maxActyHours = 6, divdr = '-') => [...randomActs]

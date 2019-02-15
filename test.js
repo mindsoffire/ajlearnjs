@@ -38,10 +38,15 @@ let aj = require('./lib/ajFns');
 // aj.trace('global \'arg_sec\' exist?')(global.hasOwnProperty('arg_sec'));
 // aj.trace('15 mod 6')(15 % 6);
 // aj.trace('new Date(2018,10,18)')(new Date(2018, 10, 18));
-// aj.trace('String.toString method')(String.toString);
+// aj.trace('String.toString method')(String.toString());
 
 // ***************************************************************************************************
 
+
+// aj.trace('aj._range()', 'noArgs')(aj._range());
+// aj.trace('aj._range(6)')(aj._range(6));
+// aj.trace('aj._range(6, 29, 2)')(aj._range(6, 29, 2));
+// console.log({ noArgs: aj._range() });
 // console.log({ mylistx: aj._range(10) });
 // console.log({ mylisty: aj._range(3, 10, 2) });
 // console.log({ mylistz: aj._range(10, 3) });
@@ -50,6 +55,9 @@ let aj = require('./lib/ajFns');
 // console.log({ list2: aj._range(65, 69) });
 // // [65, 66, 67, 68]
 // console.log({ list3: aj._range(10, -10.1, -5) });
+// console.log({ list3a: aj._range(10, 4, -5) });
+// console.log({ list3b: aj._range(-5, 14, -5) });
+// console.log({ list3c: aj._range(-5, -14, -5) });
 // // [10, 5, 0, -5, -10]
 // console.log({ list4: aj._range(10, 1) });
 // // []
@@ -100,24 +108,71 @@ let aj = require('./lib/ajFns');
 // aj.trace('aj.f_capitalize(\'hi thERE, my namE iS andrew tAN     chOon yew.\')')(aj.f_capitalize('hi thERE, my namE iS andrew tAN     chOon yew.'));
 // aj.trace('aj.f_capitalize(\'hi thERE, my       namE iS andrew tAN     chOon yew.\', \'words\')')(aj.f_capitalize('hi thERE, my       namE iS andrew tAN     chOon yew.', 'words'));
 // aj.trace('aj.f_capitalize(\'hi thERE, my namE iS andrew tAN chOon yew.   how do you              do?\', \'sentences\')')(aj.f_capitalize('hi thERE, my namE iS andrew tAN chOon yew.   how do you              do?', 'sentences'));
-// aj.trace('aj.f_capitalize(\'hi thERE, my namE iS andrew tAN chOon yew.     how do you do?\', \'allCaps\')')(aj.f_capitalize('hi thERE, my namE iS andrew tAN chOon yew.     how do you do?', 'allCaps'));
+// aj.trace('aj.f_capitalize(\'hi thERE, my namE iS andrew tAN chOon yew.     how do you do?\', \'allcaps\')')(aj.f_capitalize('hi thERE, my namE iS andrew tAN chOon yew.     how do you do?', 'allcaps'));
 // aj.trace('aj.f_capitalize(\'hi thERE, my namE iS andrew tAN chOon yew.    how do you do?\', \'words\')')(aj.f_capitalize('hi thERE, my namE iS andrew tAN chOon yew.    how do you do?', 'words'));
+// aj.trace('aj.f_capitalize(\'hi thERE, what\'s your name?    I\'m good.You?\', \'sentences\')')(aj.f_capitalize('hi thERE, what\'s your name?    I\'m good.You?', 'sentences'));
+// aj.trace('aj.f_capitalize(\' here    are some sentences in an array.  ok, some more.   can you see?\', \'sentences\')')(aj.f_capitalize(' here    are some sentences in an array.  ok, some more.   can you see?', 'sentences'));
+// aj.trace('aj.f_capitalize(\' here    are some sentences in an array.  ok, some more.   can you see?\', \'words\')')(aj.f_capitalize(' here    are some sentences in an array.  ok, some more.   can you see?', 'words'));
+// aj.trace('aj.f_capitalize(\' here    are some sentences in an array.  ok, some more.   can you see?\', \'allcaps\')')(aj.f_capitalize(' here    are some sentences in an array.  ok, some more.   can you see?', 'allcaps'));
+// aj.trace('aj.f_capitalize(\' here    are some sentences in an array.  ok, some more.   can you see?\')')(aj.f_capitalize(' here    are some sentences in an array.  ok, some more.   can you see?'));
 
 // ***************************************************************************************************
 
-// aj.trace('tf_getYear()')(aj.tf_getYear(1547206326864));
-// aj.trace('tf_getYear()')(aj.tf_getYear(1547622369150));
+// aj.trace('tf_getYear(new Date(2032, 0, 1))')(aj.tf_getYear(new Date(2032, 0, 1)));
+// aj.trace('tf_getYear()')(aj.tf_getYear());
+// aj.trace('tf_getYear(31536010000)')(aj.tf_getYear(31536010000));
+// aj.trace('tf_getYear(1547206326864)')(aj.tf_getYear(1547206326864));
+// aj.trace('tf_getYear(1547622369150)')(aj.tf_getYear(1547622369150));
+// aj.trace('tf_getYear(1948622369150)')(aj.tf_getYear(1948622369150));
+// aj.trace('tf_getYear(1958682369150)')(aj.tf_getYear(1958682369150));
 // console.table(aj.tf_getYear(1547622369150));
 // console.dir(aj.tf_getYear(1547622369150)); console.log(aj.tf_getYear(1547622369150));
 // console.table(['aj', 123, true]);
 // console.dir(['aj', 123, true]);
 // console.log(['aj', 123, true]);
 
+
+
+// aj.trace('aj.tf_getYear((Date.now())')(aj.tf_getYear(Date.now()));
+// aj.trace('aj.tf_getYear()')(aj.tf_getYear());
+// aj.trace('aj.tf_getYear(1000)')(aj.tf_getYear(1000));
+// aj.trace('aj.tf_getYear(31536000001)')(aj.tf_getYear(31536000001));
+// aj.trace('aj.tf_getYear(1958682369150)')(aj.tf_getYear(1958682369150));
+// aj.trace('aj.tf_getYear(new Date(Date.UTC(2019, 0, 1)))')(aj.tf_getYear(new Date(Date.UTC(2019, 0, 1))));
+// aj.trace('aj.tf_getYear(1546272000000)')(aj.tf_getYear(1546272000000));
+// aj.trace('aj.tf_getYear(new Date(Date.UTC(2019, 0, 5)))')(aj.tf_getYear(new Date(Date.UTC(2019, 0, 5))));
+// aj.trace('aj.tf_getYear(new Date(Date.UTC(2019, 0, 31))')(aj.tf_getYear(new Date(Date.UTC(2019, 0, 31))));
+// aj.trace('aj.tf_getYear(new Date(Date.UTC(2032, 0, 1)))')(aj.tf_getYear(new Date(Date.UTC(2032, 0, 1))));
+// aj.trace('aj.tf_getYear(new Date(2019,1,1))')(aj.tf_getYear(new Date(2019, 1, 1)));
+// aj.trace('aj.tf_getYear(new Date(2019,1,5))')(aj.tf_getYear(new Date(2019, 1, 5)));
+// aj.trace('aj.tf_getYear(new Date(2019,1,28))')(aj.tf_getYear(new Date(2019, 1, 28)));
+// aj.trace('aj.tf_getYear(new Date(1971,0,1))')(aj.tf_getYear(new Date(1971, 0, 1)));
+// aj.trace('aj.tf_getYear(new Date(2019,0,1))')(aj.tf_getYear(new Date(2019, 0, 1)));
+// aj.trace('aj.tf_getYear(new Date(2032,0,1))')(aj.tf_getYear(new Date(2032, 0, 1)));
+
+aj.trace('aj.tf_getYearA((Date.now())')(aj.tf_getYearA(Date.now()));
+aj.trace('aj.tf_getYearA()')(aj.tf_getYearA());
+aj.trace('aj.tf_getYearA(1000)')(aj.tf_getYearA(1000));
+aj.trace('aj.tf_getYearA(31536000001)')(aj.tf_getYearA(31536000001));
+aj.trace('aj.tf_getYearA(1958682369150)')(aj.tf_getYearA(1958682369150));
+aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 1)))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 1))));
+aj.trace('aj.tf_getYearA(1546272000000)')(aj.tf_getYearA(1546272000000));
+aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 5)))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 5))));
+aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 31))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 31))));
+aj.trace('aj.tf_getYearA(new Date(Date.UTC(2032, 0, 1)))')(aj.tf_getYearA(new Date(Date.UTC(2032, 0, 1))));
+aj.trace('aj.tf_getYearA(new Date(2019,1,1))')(aj.tf_getYearA(new Date(2019, 1, 1)));
+aj.trace('aj.tf_getYearA(new Date(2019,1,5))')(aj.tf_getYearA(new Date(2019, 1, 5)));
+aj.trace('aj.tf_getYearA(new Date(2019,1,28))')(aj.tf_getYearA(new Date(2019, 1, 28)));
+aj.trace('aj.tf_getYearA(new Date(1971,0,1))')(aj.tf_getYearA(new Date(1971, 0, 1)));
+aj.trace('aj.tf_getYearA(new Date(2019,0,1))')(aj.tf_getYearA(new Date(2019, 0, 1)));
+aj.trace('aj.tf_getYearA(new Date(2032,0,1))')(aj.tf_getYearA(new Date(2032, 0, 1)));
+
 // ***************************************************************************************************
 
 // aj.trace('aj.f_strnum2OrdVals_2387959823')(aj.f_strnum2OrdVals('2387959823'));
 // aj.trace('aj.f_strnum2OrdVals_2387959823.join(\'\'')(aj.f_strnum2OrdVals('2387959823').join(''));    // joining numbers make a string again - not our purpose.
 // aj.trace('aj.f_strnum2OrdVals_2018-4-23')(aj.f_strnum2OrdVals('2018-4-23', '-'));
+// aj.trace('aj.f_strnum2OrdVals_2018-4-23')(aj.f_strnum2OrdVals('2018-Apr-23', '-'));
 // aj.trace('aj.f_strnum2OrdVals_2018-4-23')(aj.f_strnum2OrdVals('2018@gmail.com', '@'));
 // aj.trace('aj.f_strnum2OrdVals(\'hi thERE, my namE iS andrew tAN     chOon yew.\')')(aj.f_strnum2OrdVals('hi thERE, my namE iS andrew tAN     chOon yew.', ' '));
 // aj.trace('aj.f_strnum2OrdVals(\'hi thERE, my namE iS andrew tAN chOon yew. how do you do?   77   436347.2\', \' \')')(aj.f_strnum2OrdVals('hi thERE, my namE iS andrew tAN chOon yew. how do you do?   77   436347.2', ' '));
@@ -127,7 +182,8 @@ let aj = require('./lib/ajFns');
 
 // aj.trace('aj.f_strnum2OrdVals_newDate_2018_10_18')(aj.f_strnum2OrdVals(aj.f_todayOrDate2YMD(date = new Date(2018, 10, 18), '.'), divdr = '.').join('|'));
 // aj.trace('newDate_2018_10_18 - notice timezone makes date diff from .getDate() method')(date); console.log({ date: date.getDate() });
-// aj.trace('aj.f_strnum2OrdVals_newDate_')(aj.f_strnum2OrdVals(aj.f_todayOrDate2YMD(), divdr = '-'));
+// aj.trace('aj.f_strnum2OrdVals_newDate_')(aj.f_strnum2OrdVals(aj.f_todayOrDate2YMD(new Date(2019, 0, 1), '##'), '##'));
+// aj.trace('aj.f_strnum2OrdVals(aj.f_todayOrDate2YMD(new Date(1958682369150)), \'-\')')(aj.f_strnum2OrdVals(aj.f_todayOrDate2YMD(new Date(1958682369150)), '-'));
 
 // ***************************************************************************************************
 
