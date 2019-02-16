@@ -150,22 +150,22 @@ let aj = require('./lib/ajFns');
 // aj.trace('aj.tf_getYear(new Date(2019,0,1))')(aj.tf_getYear(new Date(2019, 0, 1)));
 // aj.trace('aj.tf_getYear(new Date(2032,0,1))')(aj.tf_getYear(new Date(2032, 0, 1)));
 
-aj.trace('aj.tf_getYearA((Date.now())')(aj.tf_getYearA(Date.now()));
-aj.trace('aj.tf_getYearA()')(aj.tf_getYearA());
-aj.trace('aj.tf_getYearA(1000)')(aj.tf_getYearA(1000));
-aj.trace('aj.tf_getYearA(31536000001)')(aj.tf_getYearA(31536000001));
-aj.trace('aj.tf_getYearA(1958682369150)')(aj.tf_getYearA(1958682369150));
-aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 1)))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 1))));
-aj.trace('aj.tf_getYearA(1546272000000)')(aj.tf_getYearA(1546272000000));
-aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 5)))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 5))));
-aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 31))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 31))));
-aj.trace('aj.tf_getYearA(new Date(Date.UTC(2032, 0, 1)))')(aj.tf_getYearA(new Date(Date.UTC(2032, 0, 1))));
-aj.trace('aj.tf_getYearA(new Date(2019,1,1))')(aj.tf_getYearA(new Date(2019, 1, 1)));
-aj.trace('aj.tf_getYearA(new Date(2019,1,5))')(aj.tf_getYearA(new Date(2019, 1, 5)));
-aj.trace('aj.tf_getYearA(new Date(2019,1,28))')(aj.tf_getYearA(new Date(2019, 1, 28)));
-aj.trace('aj.tf_getYearA(new Date(1971,0,1))')(aj.tf_getYearA(new Date(1971, 0, 1)));
-aj.trace('aj.tf_getYearA(new Date(2019,0,1))')(aj.tf_getYearA(new Date(2019, 0, 1)));
-aj.trace('aj.tf_getYearA(new Date(2032,0,1))')(aj.tf_getYearA(new Date(2032, 0, 1)));
+// aj.trace('aj.tf_getYearA((Date.now())')(aj.tf_getYearA(Date.now()));
+// aj.trace('aj.tf_getYearA()')(aj.tf_getYearA());
+// aj.trace('aj.tf_getYearA(1000)')(aj.tf_getYearA(1000));
+// aj.trace('aj.tf_getYearA(31536000001)')(aj.tf_getYearA(31536000001));
+// aj.trace('aj.tf_getYearA(1958682369150)')(aj.tf_getYearA(1958682369150));
+// aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 1)))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 1))));
+// aj.trace('aj.tf_getYearA(1546272000000)')(aj.tf_getYearA(1546272000000));
+// aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 5)))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 5))));
+// aj.trace('aj.tf_getYearA(new Date(Date.UTC(2019, 0, 31))')(aj.tf_getYearA(new Date(Date.UTC(2019, 0, 31))));
+// aj.trace('aj.tf_getYearA(new Date(Date.UTC(2032, 0, 1)))')(aj.tf_getYearA(new Date(Date.UTC(2032, 0, 1))));
+// aj.trace('aj.tf_getYearA(new Date(2019,1,1))')(aj.tf_getYearA(new Date(2019, 1, 1)));
+// aj.trace('aj.tf_getYearA(new Date(2019,1,5))')(aj.tf_getYearA(new Date(2019, 1, 5)));
+// aj.trace('aj.tf_getYearA(new Date(2019,1,28))')(aj.tf_getYearA(new Date(2019, 1, 28)));
+// aj.trace('aj.tf_getYearA(new Date(1971,0,1))')(aj.tf_getYearA(new Date(1971, 0, 1)));
+// aj.trace('aj.tf_getYearA(new Date(2019,0,1))')(aj.tf_getYearA(new Date(2019, 0, 1)));
+// aj.trace('aj.tf_getYearA(new Date(2032,0,1))')(aj.tf_getYearA(new Date(2032, 0, 1)));
 
 // ***************************************************************************************************
 
@@ -176,7 +176,7 @@ aj.trace('aj.tf_getYearA(new Date(2032,0,1))')(aj.tf_getYearA(new Date(2032, 0, 
 // aj.trace('aj.f_strnum2OrdVals_2018-4-23')(aj.f_strnum2OrdVals('2018@gmail.com', '@'));
 // aj.trace('aj.f_strnum2OrdVals(\'hi thERE, my namE iS andrew tAN     chOon yew.\')')(aj.f_strnum2OrdVals('hi thERE, my namE iS andrew tAN     chOon yew.', ' '));
 // aj.trace('aj.f_strnum2OrdVals(\'hi thERE, my namE iS andrew tAN chOon yew. how do you do?   77   436347.2\', \' \')')(aj.f_strnum2OrdVals('hi thERE, my namE iS andrew tAN chOon yew. how do you do?   77   436347.2', ' '));
-// aj.trace('aj.f_strnum2OrdVals(\'ℱїαт ϟεℯкḯηℊ Ṳᾔⅾεґṧ⊥αη∂їηℊ\')')(aj.f_strnum2OrdVals('ℱїαт ϟεℯкḯηℊ Ṳᾔⅾεґṧ⊥αη∂їηℊ').map(ch => ch + ' , ' + ch.codePointAt(ch[0])));
+// aj.trace('aj.f_strnum2OrdVals(\'ℱїαт ϟεℯкḯηℊ Ṳᾔⅾεґṧ⊥αη∂їηℊ\')')(aj.f_strnum2OrdVals('ℱїαт ϟεℯкḯηℊ Ṳᾔⅾεґṧ⊥αη∂їηℊ').map(ch => ch + ' , ' + ch.codePointAt(0)));
 
 // ***************************************************************************************************
 
@@ -242,7 +242,22 @@ aj.trace('aj.tf_getYearA(new Date(2032,0,1))')(aj.tf_getYearA(new Date(2032, 0, 
 // let points = [40, 100, 1, 5, 25, 10, 'Zinger', 'oppa', 'apple', 'Banana', 'balm'];
 // console.log(points.map(ele => typeof ele == 'number' ? ele : ele.toLowerCase()).sort((a, b) => a == b ? 0 : a < b ? -1 : 1));
 // points = 'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²';
-// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²\'))')(aj.f_arrSort(aj.f_strnum2OrdVals(points), -1).map(ch => `${ch} , ${ch.charCodeAt(ch[0])}`));
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²\'))')(aj.f_arrSort(aj.f_strnum2OrdVals(points), -1).map(ch => `${ch} , ${ch.charCodeAt(0)}`));
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²\'))')(aj.f_arrSort(aj.f_strnum2OrdVals(points), 1).map(ch => `${ch} , ${ch.charCodeAt(0)}`));
+// -- old tests.
+
+// aj.trace('aj.f_arrSort([\'20\', 40, \'bz\', 100, \'10\', 1, 5, 25, 10, \'Zinger\', \'oppa\', \'apple\', \'Banana\', \'balm\'])')(aj.f_arrSort(['20', 40, 'bz', 100, '10', 1, 5, 25, 10, 'Zinger', 'oppa', 'apple', 'Banana', 'balm']));
+// aj.trace('f_arrSort([\'20\', 40, \'bz\', 100, \'10\', 1, 5, 25, 10, \'Zinger\', \'oppa\', \'apple\', \'Banana\', \'balm\'], -1, false)')(aj.f_arrSort(['20', 40, 'bz', 100, '10', 1, 5, 25, 10, 'Zinger', 'oppa', 'apple', 'Banana', 'balm'], -1, false));
+// aj.trace('aj.f_arrSort([\'20\', 40, \'bz\', 100, \'10\', 1, 5, 25, 10, \'Zinger\', \'oppa\', \'apple\', \'Banana\', \'balm\'], 1)')(aj.f_arrSort(['20', 40, 'bz', 100, '10', 1, 5, 25, 10, 'Zinger', 'oppa', 'apple', 'Banana', 'balm'], 1));
+// let points = [40, 100, 1, 5, 25, 10, 'Zinger', 'oppa', 'apple', 'Banana', 'balm'];
+// console.log(points.map(ele => typeof ele == 'number' ? ele : ele.toLowerCase()).sort((a, b) => a == b ? 0 : a < b ? -1 : 1));
+// points = 'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²';
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²\'))')(aj.f_arrSort(aj.f_strnum2OrdVals(points), -1).map(ch => `${ch} , ${ch.charCodeAt(0)}`));
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²\'))')(aj.f_arrSort(aj.f_strnum2OrdVals(points), 1).map(ch => `${ch} , ${ch.charCodeAt(0)}`));
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'ƒºαßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²\'))')(aj.f_arrSort(aj.f_strnum2OrdVals(points), 0).map(ch => `${ch} , ${ch.charCodeAt(0)}`));
+
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.\'), -1, false).map(ch => (ch = ch.toString(), `${ch} , ${ch.charCodeAt(0)}`))')(aj.f_arrSort(aj.f_strnum2OrdVals('This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.'), -1, false).map(ch => (ch = String(ch), `${ch} , ${ch.charCodeAt(0)}`)));
+// aj.trace('aj.f_arrSort(aj.f_strnum2OrdVals(\'This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.\'), 0).map(ch => typeof ch === \'number\' ? ch : `${ch} , ${ch.charCodeAt(0)}`)')(aj.f_arrSort(aj.f_strnum2OrdVals('This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.'), 0).map(ch => typeof ch === 'number' ? ch : `${ch} , ${ch.charCodeAt(0)}`));
 
 // ***************************************************************************************************
 
@@ -252,6 +267,8 @@ aj.trace('aj.tf_getYearA(new Date(2032,0,1))')(aj.tf_getYearA(new Date(2032, 0, 
 // aj.trace('aj.f_strOrArrReverse([\'aj\', 123, true], \'zabo\', \'|\')')(aj.f_strOrArrReverse(['aj', 123, true], 'zabo', '|'));
 // aj.trace('aj.f_strOrArrReverse(235236.326326)')(aj.f_strOrArrReverse(235236.326326));
 // aj.trace('aj.f_strOrArrReverse(\'235236.326326\')')(aj.f_strOrArrReverse('235236.326326'));
+// aj.trace('f_arrSort(f_strnum2OrdVals(\'This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.\'), 1).map(ch => typeof ch === \'number\' ? ch : `${ch} , ${ch.charCodeAt(0)}`)')(aj.f_arrSort(aj.f_strnum2OrdVals('This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.'), 1).map(ch => typeof ch === 'number' ? ch : `${ch} , ${ch.charCodeAt(0)}`));
+// aj.trace('f_strOrArrReverse(aj.f_arrSort(aj.f_strnum2OrdVals(\'This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.\'), 1).map(ch => typeof ch === \'number\' ? ch : `${ch} , ${ch.charCodeAt(0)}`))')(aj.f_strOrArrReverse(aj.f_arrSort(aj.f_strnum2OrdVals('This is a sentence that contains numbers 0,1,2,3,4,5,6,7,8,9,0.'), 1).map(ch => typeof ch === 'number' ? ch : `${ch} , ${ch.charCodeAt(0)}`)));
 
 // ***************************************************************************************************
 
