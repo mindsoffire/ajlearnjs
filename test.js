@@ -1,4 +1,5 @@
 let aj = require('./lib/ajFns');
+let qr = require('qrcode');
 
 /**
  * @tests
@@ -40,6 +41,12 @@ let aj = require('./lib/ajFns');
 // aj.trace('new Date(2018,10,18)')(new Date(2018, 10, 18));
 // aj.trace('String.toString method')(String.toString());
 
+// aj.trace('hi, this is James\' string', '************')('hi, this is James\' string');
+// aj.trace('Math.PI', '************')(Math.PI);
+// aj.trace('null', '************')(null);        // null is an object due to legacy reasons.
+// aj.trace('{ name: \'value\', idx: 5}')({ name: 'value', idx: 5 });
+// aj.trace('[\'array\', 5, 6.3463, {key: \'valueFF\'}]')(['array', 5, 6.3463, { key: 'valueFF' }]);
+
 // ***************************************************************************************************
 
 
@@ -69,14 +76,34 @@ let aj = require('./lib/ajFns');
 
 // // _______
 
-// let myChrs = aj._range(127744, 128501), i = Math.min(...myChrs), j = Math.max(...myChrs); console.log({ i, j });
-// // console.log({ inBrackets: aj.f_strOrArrReverse(myChrs) });
+let myChrs = aj._range(127744, 128501), [i, j] = [Math.min(...myChrs), Math.max(...myChrs)]; console.log({ i, j });
+// console.log({ inBrackets: aj.f_strOrArrReverse(myChrs) });
 
-// // for (let i of aj._range(127744, 128292)) i = String(i), console.log({ i, chr: String.fromCodePoint(i) });
-// myChrs = [];
-// for (let i of aj._range(127744, 128501)) i = String(i), myChrs.push({ i, chr: String.fromCodePoint(i) });
-// // console.log({ myChrs: myChrs[4].i, myChrs: myChrs[4].chr, myChrs });
-// // for (let i in aj._range(128009, 128100)) console.log(i + ':', String.fromCodePoint(i));
+// for (let i of aj._range(127744, 128292)) i = String(i), console.log({ i, chr: String.fromCodePoint(i) });
+myChrs = [];
+for (let [idx, i] of aj._range(127744, 128501).entries()) i = String(i), myChrs.push({ i, chr: String.fromCodePoint(i) }), console.log(idx === 0 ? '1st' : idx === 1 ? '2nd' : idx === 2 ? '3rd' : `${idx}th`, myChrs[idx]);
+// qr.toDataURL('I am a pony!', (err, url) => console.log(url));
+// aj.trace('test create QRCode')(qr.create('I am a pony!'));
+
+var QRCode = require('qrcode-svg');
+
+var hello = new QRCode("Hello World!");
+var modules = hello.qrcode.modules;
+
+var ascii = '';
+var length = modules.length;
+for (var y = 0; y < length; y++) {
+    for (var x = 0; x < length; x++) {
+        var module = modules[x][y];
+        ascii += (module ? String.fromCodePoint(128195) : ' ');
+    }
+    ascii += '\r\n';
+}
+console.log(ascii);
+// console.log({ myChrs: myChrs[4].i, myChrs: myChrs[4].chr });
+// console.log({ i: myChrs[4].i, myChrs: myChrs[4].chr });
+// console.log({ myChrs });
+// for (let i in aj._range(128009, 128100)) console.log(i + ':', String.fromCodePoint(i));
 
 // aj.f_chrBarMeter('sig', 185, 150, '%&');
 // aj.f_chrBarMeter('sig', 185, 150, '   %&');
