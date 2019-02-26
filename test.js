@@ -215,51 +215,65 @@ console.log(ascii);
 // ***************************************************************************************************
 
 
-// const cuppageDesign = [
-//     ['andrew', 7],
-//     ['benny', 6],
-//     ['chelsea', 5],
-//     ['dandelion', 4],
-//     // ['elijah', 7],
-//     // ['fleur', 6],
-//     // ['gratitude', 8],
-//     // ['hogwarts', 5],
-//     // ['ithink', 6],
-//     ['jennifer', 10],
-//     // ['krabi', 6],
-//     // ['lincoln', 7],
-//     // ['maria', 6],
-//     // ['nanotubial', 4],
-//     // ['oscar', 6],
-//     // ['penelope', 6],
-//     // ['queen', 7],
-//     // ['rustic', 6],
-//     // ['starship', 5],
-//     // ['temporal', 6],
-//     // ['umpire', 5],
-//     ['valiant', 6],
-//     ['well', 6]
-// ];
+const cuppageDesign = [
+    ['andrew', 7],
+    ['benny', 6],
+    ['chelsea', 5],
+    ['dandelion', 4],
+    // ['elijah', 7],
+    // ['fleur', 6],
+    // ['gratitude', 8],
+    // ['hogwarts', 5],
+    // ['ithink', 6],
+    ['jennifer', 10],
+    // ['krabi', 6],
+    // ['lincoln', 7],
+    // ['maria', 6],
+    // ['nanotubial', 4],
+    // ['oscar', 6],
+    // ['penelope', 6],
+    // ['queen', 7],
+    // ['rustic', 6],
+    // ['starship', 5],
+    // ['temporal', 6],
+    // ['umpire', 5],
+    ['valiant', 6],
+    ['well', 6]
+];
 // var cuppage = cuppageDesign.map((arr, idx) => {
 //     let [x, y] = arr;
 //     let z = `${idx + 1}_` + x.charAt(0).toLowerCase() + x.charAt(1).toLowerCase() + x.charAt(2).toLowerCase() + '_' + (y >= 8 ? 'Suite' : 'Rm') + '_' + y + 'pax';
 //     [y, x, z] = [x, y, z];
 //     return [x, y, z];
-// }).sort((a, b) => a[0] == b[0] ? 0 : a[0] < b[0] ? -1 : 1);
+// }).sort((a, b) => a[1] === b[1] ? 0 : a[1] < b[1] ? -1 : 1);
 // aj.trace('cuppage')(cuppage);
 // console.log({ cuppage: JSON.stringify(cuppage) });
 
-// for (let room of cuppage) room.push(aj.f_randActyBlot(3, 2));
+// for (let room of cuppage) room.push(aj.f_randActyBlot(3, 3));
 // aj.trace('cuppage')(cuppage);
 
 // console.log({ cuppage: JSON.stringify(cuppage) });
+
+var cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign, 'capacity');
+// aj.trace('')(cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign));
+// aj.trace('aj.f_mapResDesign2Space(cuppageDesign, \'capacity\')')(cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign, 'capacity'));
+// aj.trace('{cuppageDesign, cuppageSpace}')({ cuppageDesign, cuppageSpace });
+
+for (let room of cuppageSpace) room.push(aj.f_randActyBlot(3, 2));
+// aj.trace('cuppageSpace')(cuppageSpace);
+
+// aj.trace('aj.f_chkOrBookRm(cuppageSpace)')(aj.f_chkOrBookRm(cuppageSpace));
+// aj.trace('aj.f_chkOrBookRm(cuppageSpace, 7)')(aj.f_chkOrBookRm(cuppageSpace, 7));
+// aj.trace('aj.f_chkOrBookRm(cuppageSpace, 7, \'2019.3.1\', 1200, 3)')(aj.f_chkOrBookRm(cuppageSpace, 7, '2019.3.1', 1200, 3));
+// aj.trace('aj.f_chkOrBookRm(cuppageSpace, 7, \'2019.3.1\', 1200, 3, \'Augustus Tan.aug2019@gmail.com.94556047\')')(aj.f_chkOrBookRm(cuppageSpace, 7, '2019.3.1', 1200, 3, 'Augustus Tan.aug2019@gmail.com.94556047'));
+aj.trace('aj.f_chkOrBookRm(cuppageSpace, 9, \'2019.3.1\', 0930, 6, \'Augustus Tan.aug2019@gmail.com.94556047\')')(aj.f_chkOrBookRm(cuppageSpace, 9, '2019.3.1', 0930, 6, 'Augustus Tan.aug2019@gmail.com.94556047'));
 
 // console.log(aj.f_chkOrBookRm(cuppage));
 // console.log(aj.f_chkOrBookRm(cuppage, 6));
-// console.log(aj.f_chkOrBookRm(cuppage, 6, '2019.1.9', 1200, 3));
-// console.log(aj.f_chkOrBookRm(cuppage, 9, '2019.1.9', 0930, 6, 'Augustus Tan.aug2019@gmail.com.94556047')); /* console.log({ cuppage: JSON.stringify(cuppage) }); */
-// console.log(aj.f_chkOrBookRm(cuppage, 6, '2019.1.9', 1200, 3, 'jo')); console.log({ cuppage: JSON.stringify(cuppage) });
-// console.log(aj.f_chkOrBookRm(cuppage, 6, '2019.1.9', 1200, 3)); /* console.log({ cuppage: JSON.stringify(cuppage) }); */
+// console.log(aj.f_chkOrBookRm(cuppage, 6, '2019.3.1', 1200, 3));
+// console.log(aj.f_chkOrBookRm(cuppage, 9, '2019.3.1', 0930, 6, 'Augustus Tan.aug2019@gmail.com.94556047')); /* console.log({ cuppage: JSON.stringify(cuppage) }); */
+// console.log(aj.f_chkOrBookRm(cuppage, 6, '2019.3.1', 1200, 3, 'jo')); console.log({ cuppage: JSON.stringify(cuppage) });
+// console.log(aj.f_chkOrBookRm(cuppage, 6, '2019.3.1', 1200, 3)); /* console.log({ cuppage: JSON.stringify(cuppage) }); */
 
 
 // ***************************************************************************************************
