@@ -100,34 +100,36 @@ for (var y = 0; y < length; y++) {
     ascii += '\r\n';
 }
 console.log(ascii);
-// console.log({ myChrs: myChrs[4].i, myChrs: myChrs[4].chr });
-// console.log({ i: myChrs[4].i, myChrs: myChrs[4].chr });
-// console.log({ myChrs });
-// for (let i in aj._range(128009, 128100)) console.log(i + ':', String.fromCodePoint(i));
 
-// aj.f_chrBarMeter('sig', 185, 150, '%&');
-// aj.f_chrBarMeter('sig', 185, 150, '   %&');
-// aj.f_chrBarMeter('sig', 185, 150, ' ');
 
-// const codePtChrs = [1012, 2604, 3051, 3485, 3940, 4240, 5555, 9020, 9030, 9040, 9050, 9200, 9210, 9400, 9410, 9420, 9430, 9440, 9460, 9470, 9600, 9610, 9611, 9612, 9613, 9614, 9615, 9617, 9618, 9619, 9620, 9640, 9650, 9660, 9670, 9690, 60000];
-// var meter = [];
-// for (let deg = 0, level = 0, maxLvl = 120, k = 0, chr;
-//     deg <= 360 * 2;
-//     deg += 10, k >= codePtChrs.length ? k = 0 : k++ , [level, chr] = (deg > 90 * 2 && deg < 180 * 2) || (deg > 270 * 2 && deg < 360 * 2) ? [Math.random() * maxLvl, String.fromCodePoint(codePtChrs[k])] : [Math.sin(Math.PI / 180 * deg) * maxLvl / 2 + maxLvl * 0.2, String.fromCodePoint(myChrs[deg].i)]) meter.push(aj.f_chrBarMeter('vol', level, maxLvl, chr, false));
-// for (let deg = 0, level = 0, maxLvl = 120, k = 0, chr;
-//     deg <= 360 * 2;
-//     deg += 10, k >= codePtChrs.length ? k = 0 : k++ , [level, chr] = (deg > 90 * 2 && deg < 180 * 2) || (deg > 270 * 2 && deg < 360 * 2) ? [Math.random() * maxLvl, String.fromCodePoint(codePtChrs[k])] : [Math.sin(Math.PI / 180 * deg) * maxLvl / 2 + maxLvl * 0.2, String.fromCodePoint(myChrs[deg].i)]) meter.push(aj.f_chrBarMeter('vol', level, maxLvl, String.fromCodePoint(9613)));
+console.log({ myChrs: myChrs[4].i, myChrs: myChrs[4].chr });
+console.log({ i: myChrs[4].i, myChrs: myChrs[4].chr });
+console.log({ myChrs });
+for (let i in aj._range(128009, 128100)) console.log(i + ':', String.fromCodePoint(i));
 
-// console.log('\n\n\n', meter.length); meter.push('\n');
+aj.f_chrBarMeter('sig', 185, 150, '%&');
+aj.f_chrBarMeter('sig', 185, 150, '   %&');
+aj.f_chrBarMeter('sig', 185, 150, ' ');
 
-// // const sleep = ms => new Promise(res => setTimeout(res, ms));
-// // var print = async (msg, ms) => { process.stdout.write(msg); await sleep(ms); }
+const codePtChrs = [1012, 2604, 3051, 3485, 3940, 4240, 5555, 9020, 9030, 9040, 9050, 9200, 9210, 9400, 9410, 9420, 9430, 9440, 9460, 9470, 9600, 9610, 9611, 9612, 9613, 9614, 9615, 9617, 9618, 9619, 9620, 9640, 9650, 9660, 9670, 9690, 60000];
+var meter = [];
+for (let deg = 0, level = 0, maxLvl = 120, k = 0, chr;
+    deg <= 360 * 2;
+    deg += 10, k >= codePtChrs.length ? k = 0 : k++ , [level, chr] = (deg > 90 * 2 && deg < 180 * 2) || (deg > 270 * 2 && deg < 360 * 2) ? [Math.random() * maxLvl, String.fromCodePoint(codePtChrs[k])] : [Math.sin(Math.PI / 180 * deg) * maxLvl / 2 + maxLvl * 0.2, String.fromCodePoint(myChrs[deg].i)]) meter.push(aj.f_chrBarMeter('vol', level, maxLvl, chr, false));
+for (let deg = 0, level = 0, maxLvl = 120, k = 0, chr;
+    deg <= 360 * 2;
+    deg += 10, k >= codePtChrs.length ? k = 0 : k++ , [level, chr] = (deg > 90 * 2 && deg < 180 * 2) || (deg > 270 * 2 && deg < 360 * 2) ? [Math.random() * maxLvl, String.fromCodePoint(codePtChrs[k])] : [Math.sin(Math.PI / 180 * deg) * maxLvl / 2 + maxLvl * 0.2, String.fromCodePoint(myChrs[deg].i)]) meter.push(aj.f_chrBarMeter('vol', level, maxLvl, String.fromCodePoint(9613)));
 
-// // let danceMeter = async (strArr, ms) => {
-// //     for (let i = 0; i < meter.length; i++)  await print(meter[i], ms);
-// // }
+console.log('\n\n\n', meter.length); meter.push('\n');
 
-// aj.danceMeter(meter, 100);
+// const sleep = ms => new Promise(res => setTimeout(res, ms));
+// var print = async (msg, ms) => { process.stdout.write(msg); await sleep(ms); }
+
+// let danceMeter = async (strArr, ms) => {
+//     for (let i = 0; i < meter.length; i++)  await print(meter[i], ms);
+// }
+
+aj.danceMeter(meter, 100);
 
 
 // ***************************************************************************************************
