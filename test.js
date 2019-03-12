@@ -257,7 +257,7 @@ const cuppageDesign = [
 var cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign, 'capacity');
 // aj.trace('')(cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign));
 // aj.trace('aj.f_mapResDesign2Space(cuppageDesign, \'capacity\')')(cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign, 'capacity'));
-// aj.trace('{cuppageDesign, cuppageSpace}')({ cuppageDesign, cuppageSpace });
+aj.trace('{cuppageDesign, cuppageSpace}')({ cuppageDesign, cuppageSpace });
 
 for (let room of cuppageSpace) room.push(aj.f_randActyBlot(3, 2));
 // aj.trace('cuppageSpace')(cuppageSpace);
