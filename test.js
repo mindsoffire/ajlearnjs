@@ -82,6 +82,8 @@ let myChrs = aj._range(127744, 128501), [i, j] = [Math.min(...myChrs), Math.max(
 // for (let i of aj._range(127744, 128292)) i = String(i), console.log({ i, chr: String.fromCodePoint(i) });
 myChrs = [];
 for (let [idx, i] of aj._range(127744, 128501).entries()) i = String(i), myChrs.push({ i, chr: String.fromCodePoint(i) }), console.log(idx === 0 ? '1st' : idx === 1 ? '2nd' : idx === 2 ? '3rd' : `${idx}th`, myChrs[idx]);
+
+
 // qr.toDataURL('I am a pony!', (err, url) => console.log(url));
 // aj.trace('test create QRCode')(qr.create('I am a pony!'));
 
@@ -259,10 +261,10 @@ const cuppageDesign = [
 var cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign, 'capacity');
 // aj.trace('')(cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign));
 // aj.trace('aj.f_mapResDesign2Space(cuppageDesign, \'capacity\')')(cuppageSpace = aj.f_mapResDesign2Space(cuppageDesign, 'capacity'));
-aj.trace('{cuppageDesign, cuppageSpace}')({ cuppageDesign, cuppageSpace });
+// aj.trace('{cuppageDesign, cuppageSpace}')({ cuppageDesign, cuppageSpace });
 
 for (let room of cuppageSpace) room.push(aj.f_randActyBlot(3, 2));
-// aj.trace('cuppageSpace')(cuppageSpace);
+aj.trace('cuppageSpace')(cuppageSpace);
 
 // aj.trace('aj.f_chkOrBookRm(cuppageSpace)')(aj.f_chkOrBookRm(cuppageSpace));
 // aj.trace('aj.f_chkOrBookRm(cuppageSpace, 7)')(aj.f_chkOrBookRm(cuppageSpace, 7));
